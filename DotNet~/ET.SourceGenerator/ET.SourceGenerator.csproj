@@ -15,20 +15,16 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <OutputPath>./obj</OutputPath>
+      <OutputPath>obj/Debug</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <OutputPath>./obj</OutputPath>
+      <OutputPath>obj/Debug</OutputPath>
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="../ET.Analyzer/Extension/*.cs">
-            <Link>Extension\%(RecursiveDir)%(FileName)%(Extension)</Link>
-        </Compile>
-        <Compile Include="../ET.Analyzer/Config/Definition.cs" />
-        <Compile Include="../StringHashHelper.cs" />
-        <Compile Include="../ET.Analyzer/Config/AnalyzeAssembly.cs" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.9.0" PrivateAssets="all" />
+        <PackageReference Update="NETStandard.Library" PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup>

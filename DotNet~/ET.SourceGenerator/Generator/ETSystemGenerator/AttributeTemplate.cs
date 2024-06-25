@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ET.Generator
+namespace ET
 {
 
     public class AttributeTemplate

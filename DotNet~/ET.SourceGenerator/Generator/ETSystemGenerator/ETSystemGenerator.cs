@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
-using ET.Analyzer;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace ET.Generator;
+namespace ET;
 
 [Generator(LanguageNames.CSharp)]
 public class ETSystemGenerator: ISourceGenerator
