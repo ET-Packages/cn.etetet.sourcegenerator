@@ -12,5 +12,9 @@
     "type": "git",
     "url": "https://github.com/egametang/ET"
   },
-  "relatedPackages": {}
+  "relatedPackages": {},
+  "publishConfig": 
+  { 
+    "registry": "https://npm.pkg.github.com/@ET-Packages" 
+  }
 }
