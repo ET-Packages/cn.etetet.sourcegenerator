@@ -15,11 +15,11 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <OutputPath>obj/Debug</OutputPath>
+      <OutputPath>$(SolutionDir)Bin</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <OutputPath>obj/Debug</OutputPath>
+      <OutputPath>$(SolutionDir)Bin</OutputPath>
     </PropertyGroup>
 
     <ItemGroup>
