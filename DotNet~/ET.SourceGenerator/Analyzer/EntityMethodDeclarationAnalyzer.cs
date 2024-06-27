@@ -69,7 +69,7 @@ namespace ET
             }
 
             // 忽略含有EnableMethod标签的实体类
-            if (namedTypeSymbol.HasAttribute(Definition.EnableMethodAttribute))
+            if (AnalyzerHelper.HasAttribute((ITypeSymbol)namedTypeSymbol, Definition.EnableMethodAttribute))
             {
                 return;
             }

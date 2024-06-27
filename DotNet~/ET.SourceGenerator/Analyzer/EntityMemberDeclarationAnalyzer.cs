@@ -254,8 +254,8 @@ namespace ET
         /// </summary>
         private void AnalyzeComponentChildAttr(SemanticModelAnalysisContext context, INamedTypeSymbol namedTypeSymbol)
         {
-            bool hasComponentOf = namedTypeSymbol.HasAttribute(Definition.ComponentOfAttribute);
-            bool hasChildOf = namedTypeSymbol.HasAttribute(Definition.ChildOfAttribute);
+            bool hasComponentOf = AnalyzerHelper.HasAttribute((ITypeSymbol)namedTypeSymbol, Definition.ComponentOfAttribute);
+            bool hasChildOf = AnalyzerHelper.HasAttribute((ITypeSymbol)namedTypeSymbol, Definition.ChildOfAttribute);
             if (hasComponentOf && hasChildOf)
             {
                 var syntax = namedTypeSymbol.DeclaringSyntaxReferences.First().GetSyntax() as ClassDeclarationSyntax;

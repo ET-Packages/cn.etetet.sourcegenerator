@@ -81,7 +81,7 @@ namespace ET
             INamedTypeSymbol? typeSymbol = namedTypeSymbol;
             while (typeSymbol != null)
             {
-                if (typeSymbol.HasBaseAttribute(Definition.EnableClassAttribute))
+                if (typeSymbol.HasAttribute(Definition.EnableClassAttribute))
                 {
                     return true;
                 }

@@ -209,7 +209,7 @@ namespace ET
                 return;
             }
 
-            if (!classTypeSymbol.HasAttribute("MemoryPack.MemoryPackableAttribute"))
+            if (!AnalyzerHelper.HasAttribute((ITypeSymbol)classTypeSymbol, "MemoryPack.MemoryPackableAttribute"))
             {
                 return;
             }

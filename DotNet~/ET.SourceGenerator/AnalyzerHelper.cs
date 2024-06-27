@@ -126,11 +126,11 @@ namespace ET
         /// <summary>
         ///     INamedTypeSymbol 是否有指定的基类Attribute
         /// </summary>
-        public static bool HasBaseAttribute(this INamedTypeSymbol namedTypeSymbol, string AttributeName)
+        public static bool HasAttribute(this INamedTypeSymbol namedTypeSymbol, string AttributeName)
         {
             foreach (AttributeData? attributeData in namedTypeSymbol.GetAttributes())
             {
-                INamedTypeSymbol? attributeType = attributeData.AttributeClass?.BaseType;
+                INamedTypeSymbol? attributeType = attributeData.AttributeClass;
                 
                 while (attributeType != null)
                 {
