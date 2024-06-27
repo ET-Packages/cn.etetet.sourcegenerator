@@ -18,8 +18,6 @@ namespace ET
 
         public const string ISystemType = "ET.ISystemType";
         
-        public const string BaseAttribute = "ET.BaseAttribute";
-        
         public const string ObjectSystemAttribute = "ET.SystemAttribute";
 
         public const string EnableMethodAttribute = "ET.EnableMethodAttribute";

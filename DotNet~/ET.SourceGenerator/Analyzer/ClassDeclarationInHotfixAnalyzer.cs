@@ -1,4 +1,5 @@
-﻿using System.Collections.Immutable;
+﻿using System;
+using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -10,11 +11,11 @@ namespace ET
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public class ClassDeclarationInHotfixAnalyzer: DiagnosticAnalyzer
     {
-        private const string Title = "Hotfix程序集中 只能声明含有BaseAttribute子类特性的类或静态类";
+        private const string Title = "Hotfix程序集中 只能声明含有EnableClassAttribute子类特性的类或静态类";
 
-        private const string MessageFormat = "Hotfix程序集中 只能声明含有BaseAttribute子类特性的类或静态类 类: {0}";
+        private const string MessageFormat = "Hotfix程序集中 只能声明含有EnableClassAttribute子类特性的类或静态类 类: {0}";
 
-        private const string Description = "Hotfix程序集中 只能声明含有BaseAttribute子类特性的类或静态类.";
+        private const string Description = "Hotfix程序集中 只能声明含有EnableClassAttribute子类特性的类或静态类.";
 
         private static readonly DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticIds.ClassDeclarationInHotfixAnalyzerRuleId,
             Title,
@@ -80,7 +81,7 @@ namespace ET
             INamedTypeSymbol? typeSymbol = namedTypeSymbol;
             while (typeSymbol != null)
             {
-                if (typeSymbol.HasBaseAttribute(Definition.BaseAttribute))
+                if (typeSymbol.HasBaseAttribute(Definition.EnableClassAttribute))
                 {
                     return true;
                 }

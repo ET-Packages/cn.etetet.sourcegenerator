@@ -131,6 +131,7 @@ namespace ET
             foreach (AttributeData? attributeData in namedTypeSymbol.GetAttributes())
             {
                 INamedTypeSymbol? attributeType = attributeData.AttributeClass?.BaseType;
+                
                 while (attributeType != null)
                 {
                     if (attributeType.ToString() == AttributeName)
