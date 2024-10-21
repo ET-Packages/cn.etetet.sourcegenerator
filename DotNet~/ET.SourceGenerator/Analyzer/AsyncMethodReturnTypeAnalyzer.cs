@@ -26,6 +26,10 @@ namespace ET
 
         private void Analyzer(SyntaxNodeAnalysisContext context)
         {
+            if (!AnalyzerHelper.IsAssemblyNeedAnalyze(context.Compilation.AssemblyName, AnalyzeAssembly.All))
+            {
+                return;
+            }
             IMethodSymbol? methodSymbol = null;
             
             if (context.Node is MethodDeclarationSyntax methodDeclarationSyntax)
