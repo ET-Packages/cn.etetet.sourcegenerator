@@ -84,7 +84,7 @@ public class EntitySystemCodeFixProvider:CodeFixProvider
             throw new Exception("newMembers.Count==0");
         }
         
-        var newClassDeclaration = classDeclaration.WithMembers(classDeclaration.Members.AddRange(newMembers)).WithAdditionalAnnotations(Formatter.Annotation);
+        var newClassDeclaration = classDeclaration.WithMembers(classDeclaration.Members.InsertRange(0, newMembers)).WithAdditionalAnnotations(Formatter.Annotation);
         document = document.WithSyntaxRoot(root.ReplaceNode(classDeclaration, newClassDeclaration));
         document = await CleanupDocumentAsync(document, cancellationToken);
         return document;

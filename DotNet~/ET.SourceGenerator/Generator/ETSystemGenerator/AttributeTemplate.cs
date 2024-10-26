@@ -12,7 +12,7 @@ namespace ET
         {
             this.templates.Add("EntitySystem", 
                 $$"""
-                $attribute$
+                        $attribute$
                         public class $argsTypesUnderLine$_$methodName$System: $methodName$System<$argsTypes$>
                         {   
                             protected override $returnType$ $methodName$($argsTypesVars$)
@@ -24,7 +24,7 @@ namespace ET
             
             this.templates.Add("LSEntitySystem", 
                 $$"""
-                $attribute$
+                        $attribute$
                         public class $argsTypesUnderLine$_$methodName$System: $methodName$System<$argsTypes$>
                         {   
                             protected override void $methodName$($argsTypesVars$)
@@ -36,7 +36,7 @@ namespace ET
             
             this.templates.Add("MessageHandler", 
                 $$"""
-                $attribute$
+                        $attribute$
                 	    public class $className$_$methodName$_Handler: MessageHandler<$argsTypesWithout0$>
                 	    {
                 	    	protected override async ETTask Run($argsTypesVars$)
@@ -48,7 +48,7 @@ namespace ET
             
             this.templates.Add("ActorMessageHandler", 
                 $$"""
-                $attribute$
+                        $attribute$
                 	    public class $className$_$methodName$_Handler: ActorMessageHandler<$argsTypes$>
                 	    {
                 	    	protected override async ETTask Run($argsTypesVars$)
@@ -60,7 +60,7 @@ namespace ET
             
             this.templates.Add("ActorMessageLocationHandler", 
                 $$"""
-                $attribute$
+                        $attribute$
                 	    public class $className$_$methodName$_Handler: ActorMessageLocationHandler<$argsTypes$>
                 	    {
                 	    	protected override async ETTask Run($argsTypesVars$)
@@ -72,7 +72,7 @@ namespace ET
             
             this.templates.Add("Event", 
                 $$"""
-                $attribute$
+                        $attribute$
                         public class $argsTypes2$_$methodName$: AEvent<$argsTypes$>
                         {
                             protected override async ETTask Run($argsTypesVars$)
